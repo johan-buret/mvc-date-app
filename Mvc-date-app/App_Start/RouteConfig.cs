@@ -16,9 +16,9 @@ namespace Mvc_date_app
 
             routes.MapRoute(
                 name: "Date"
-                , url: "{controller}/{action}/bydate/{date}"
+                , url: "bydate/{controller}/{action}/{date}"
                 , defaults: new { controller = "Home", action = "Index", datespecialformat = UrlParameter.Optional }
-                , constraints: new { datespecialformat = @"\d{12}" }).RouteHandler = new DateRouteHandler();
+                , constraints: new { date = @"\d{12}" }).RouteHandler = new DateRouteHandler();
 
             routes.MapRoute(
                 name: "Default",
