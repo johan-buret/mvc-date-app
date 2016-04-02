@@ -10,7 +10,6 @@ namespace Mvc_date_app.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        //[DateFilter]
         public ActionResult Index(DateTime? date)
         {
             if (!date.HasValue) { date = DateTime.Now; }
